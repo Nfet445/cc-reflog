@@ -17,7 +17,9 @@ Branches (4)
 Tags (1)
   v1  2026-10-01
 History
-  Filter the git tree
+  ╭──────────────────────────╮
+  │ Filter the git tree      │
+  ╰──────────────────────────╯
   ● add spike        (HEAD -> ..){origin}
   ● fix graph
   load 50 more
@@ -75,7 +77,7 @@ A branch row opens a popup under it with its upstream and age.
 | `rename` | asks for a new name, then `git branch -m` |
 | `more` → `delete` | after `yes`, `git branch -d` (git itself refuses an unmerged branch or one checked out elsewhere) |
 | `more` → `merge` / `rebase` | after `yes`, merges the branch into, or rebases, the current branch; refused on a dirty tree |
-| `history of this branch` | draws only that branch's commits; press again for all |
+| `history of this branch` | draws only that branch's commits; the button then reads `show all history` |
 
 The current branch's popup reads `checked out here` instead of the buttons above.
 
@@ -98,7 +100,7 @@ The graph is laid out by the mod itself, drawn with kitty's box characters. A ro
 | `more` → `drop` | after `yes`, `git rebase --onto <hash>^ <hash>` |
 | `more` → `merge` / `rebase` | after `yes`, merges the commit into, or rebases the current branch onto, the commit |
 | `more` → `reset --hard` | after `yes`, `git reset --hard <hash>` |
-| `filter` field | always shown under History: type text and press Enter to keep the commits whose message has it (case-insensitive, literal), drawn flat; an empty field shows all; `clear` (shown while a filter or branch scope is set) resets both |
+| filter field | a rounded box under History, always shown (placeholder `Filter the git tree`): type text and press Enter to keep the commits whose message has it (case-insensitive, literal), drawn flat; an empty field shows all; `clear` (shown while a filter or branch scope is set) resets both |
 | `load N more` | under the graph while it is full: reads N more commits (N is `maxCommits`) |
 
 On the checked-out commit (`HEAD`) the buttons that would do nothing are hidden: `checkout`, `cherry-pick`, `revert` and `merge`.
