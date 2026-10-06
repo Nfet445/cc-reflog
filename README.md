@@ -25,6 +25,15 @@ History
 
 Run `/reflog` to open it (or read git again if it is open) and `/reflog stop` to close it.
 
+## Install
+
+```
+/plugin marketplace add Nfet445/cc-reflog
+/plugin install reflog@cc-reflog
+```
+
+or from a shell: `claude plugin marketplace add Nfet445/cc-reflog` and `claude plugin install reflog@cc-reflog`. Requires Claude Code 2.1.287 or newer.
+
 ## Where it draws
 
 In the **fullscreen layout** the engine docks the pane beside the transcript, floor to ceiling. That layout needs a terminal at least 110 columns wide; turn it on with `/tui fullscreen` (the session restarts and resumes) or `CLAUDE_CODE_NO_FLICKER=1`. On the classic layout the same pane sits above the prompt, with the same rows and actions.
@@ -125,7 +134,7 @@ Only git, by argv (no shell), through `$.process.run`.
   openOnStart: boolean open the pane when a session starts (default true)
 ```
 
-Declared in `cc-reflog/.claude-plugin/plugin.json` (`userConfig`). Set them in `/config`, in user settings (`~/.claude/settings.json`, never project settings), with `--settings <file>` or in managed settings, under the plugin's id:
+Declared in `cc-reflog/.claude-plugin/plugin.json` (`userConfig`). Set them in `/config`, in user settings (`~/.claude/settings.json`, never project settings), with `--settings <file>` or in managed settings, under the plugin's id (`reflog@cc-reflog` when installed from the marketplace, plain `reflog` with `--plugin-dir`):
 
 ```json
 { "pluginConfigs": { "reflog": { "options": { "columns": 56 } } } }

@@ -1,0 +1,16 @@
+{
+  "name": "cc-reflog",
+  "owner": {
+    "name": "c2h5oh"
+  },
+  "metadata": {
+    "description": "cc-reflog: a lazygit-style git pane for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "reflog",
+      "source": "./cc-reflog",
+      "description": "A lazygit-style git pane for Claude Code"
+    }
+  ]
+}
