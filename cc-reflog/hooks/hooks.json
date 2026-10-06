@@ -1,0 +1,6 @@
+{
+  "description": "reflog: /reflog opens a Pane listing worktrees and branches; ui.press on its rows runs /cd or git switch; turn.complete and /cd refresh it",
+  "modules": [
+    "./cc-reflog.tsx"
+  ]
+}
